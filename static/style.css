@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+  background-color: #0e0e0e;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Layer */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 94, 58, 0.35),
+      transparent 50%
+    ),
+    radial-gradient(circle at 80% 25%, rgba(255, 195, 0, 0.25), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(0, 128, 255, 0.3), transparent 50%),
+    radial-gradient(circle at 30% 75%, rgba(142, 68, 173, 0.3), transparent 50%);
+  background-blend-mode: screen;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+
+.container {
+  background-color: rgb(33, 33, 33);
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(162, 169, 163);
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.form-group {
+  flex: 0 0 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+.result-box{
+  display: block;
+  padding-top: 5px;
+  font-weight: bold;
+  color: white;
+  margin-left: 380px;
+}
+input {
+  display: flex;
+  color: white;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 9999px;
+  font-size: 14px;
+  background-color: #282828;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+button {
+  background-color: #3cb286;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 115px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-left: 350px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #34a174;
+}
+.form-group-full {
+  flex: 0 0 100%;
+  margin-top: 10px;
+}

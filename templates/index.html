@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Model Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Retail Store Sales Forecasting by Product<br />Category</h2>
+      <form id="predictionForm">
+        <div class="form-group ">
+          <label for="Item_Type">Item Type</label>
+          <input
+            list="item_types_data_list"
+            id="Item_Type"
+            name="Item_Type"
+            autocomplete="off"
+            required
+          />
+          <datalist id="item_types_data_list">
+            {% for item_type in item_types %}
+            <option value="{{item_type}}">{% endfor %}</option>
+          </datalist>
+        </div>
+        <div class="form-group">
+          <label for="Item_Identifier">Item Identifier</label>
+          <input
+            list="item_identifiers_data_list"
+            id="Item_Identifier"
+            name="Item_Identifier"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="item_identifiers_data_list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="Item_Weight">Item Weight</label>
+          <input
+            type="number"
+            step="any"
+            id="Item_Weight"
+            name="Item_Weight"
+            autocomplete="off"
+            min=0
+            required
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label for="Item_Fat_Content">Item Fat Content</label>
+          <input
+            list="items_fat_content_data_list"
+            id="Item_Fat_Content"
+            name="Item_Fat_Content"
+            autocomplete="off"
+            required
+           
+          />
+          <datalist id="items_fat_content_data_list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="Item_Visibility">Item Visibility</label>
+          <input
+            list="items_visibility_data_list"       
+            id="Item_Visibility"
+            name="Item_Visibility"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="items_visibility_data_list"> </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="Item_MRP">Item MRP</label>
+          <input
+            type="number"
+            step="any"
+            id="Item_MRP"
+            name="Item_MRP"
+            autocomplete="off"
+            min=0
+            required
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="Outlet_Identifier">Outlet Identifier</label>
+          <input
+            list="outlet_identifiers_data_list"
+            id="Outlet_Identifier"
+            name="Outlet_Identifier"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="outlet_identifiers_data_list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="forecast_year"
+            >Forecast Year</label
+          >
+          <input
+            type="number"
+            step="any"
+            id="forecast_year"
+            name="forecast_year"
+            autocomplete="off"
+            required
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="Outlet_Size">Outlet Size</label>
+          <input
+            list="outlet_sizes_data_list"
+            id="Outlet_Size"
+            name="Outlet_Size"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="outlet_sizes_data_list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="Outlet_Location_Type">Outlet Location Type</label>
+          <input
+            list="outlet_location_types_data_list"
+            id="Outlet_Location_Type"
+            name="Outlet_Location_Type"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="outlet_location_types_data_list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="Outlet_Type">Outlet Type</label>
+          <input
+            list="outlet_types_data_list"
+            id="Outlet_Type"
+            name="Outlet_Type"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="outlet_types_data_list"> </datalist>
+        </div>
+        <div class="form-group">
+          <label for="model">Select Model</label>
+          <input
+            list="models_name_data_list"
+            id="model"
+            name="model"
+            autocomplete="off"
+            required
+            disabled
+          />
+          <datalist id="models_name_data_list">
+            {% for model_name in models_name %}
+            <option value="{{model_name}}">{% endfor %}</option>
+          </datalist>
+        </div>
+        <div class="form-group-full">
+          <button type="submit" id="submitButton">Submit</button>
+        </div>
+      </form>
+      <div id="resultBox" class="result-box">
+        <h3 id="predictionText"></h3>
+      </div>
+    </div>
+    <script>
+      const pageKey = "{{ page_key }}";
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
