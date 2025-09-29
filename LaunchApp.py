@@ -44,7 +44,7 @@ def startApp(venv_python,venv_dir,notebook_path,signal_file_path):
                        "seaborn==0.13.2",
                        "scikit-learn==1.7.1",
                        "ipykernel==6.30.1",
-                       "jupyter notebook"
+                       "notebook==7.2.2"
                        ]  
           subprocess.run([venv_python, "-m", "pip", "install"] + libraries)
           print("Virtual environment setup complete!")
