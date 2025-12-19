@@ -1,63 +1,126 @@
-Project Name: Sales Forecasting by Product Category
+# Sales Forecasting by Product Category
 
-This project focuses on predicting sales by product category using machine learning. It provides a simple interface where you can train the model and launch a web app to view results.
+This project focuses on predicting retail sales at the **product category level** using machine learning techniques.  
+It provides an automated workflow where the user can train a model and launch a web application to view forecasting results.
 
-Requirements
+The project is designed to simplify setup by automatically creating a virtual environment, installing required libraries, and launching Jupyter Notebook and a Flask web app.
 
-* Python (any recent version installed on your computer)
+---
 
-All other dependencies are automatically handled.
+## Project Overview
 
-How to Run
+Accurate sales forecasting helps retail businesses plan inventory, manage supply chains, and improve decision-making.  
+This project uses historical sales data to train a machine learning model that predicts future sales based on product categories.
 
-1. Clone the repository:
+---
 
-   
-   git clone https://github.com/udaypatel04/Retail-Store-Sales-Forecasting-by-Product-Category.git
-   cd Retail-Store-Sales-Forecasting-by-Product-Category
-   
+## Features
 
-2. Start the project:
+- Product category-wise sales forecasting
+- Automated virtual environment creation
+- Automatic dependency installation
+- Model training using Jupyter Notebook
+- Flask-based web interface to view results
+- Simple and beginner-friendly workflow
 
-   
-   python LaunchApp.py
-   
+---
 
-   * This will create a virtual environment.
-   * It will also install all necessary libraries.
-   * Jupyter Notebook will launch automatically.
+## Requirements
 
-3. In Jupyter Notebook:
+- **Python** (any recent version installed on the system)
 
-   * Change the kernel to the one named **projectVirtualEnv**.
-   * Run all cells in order.
-   * Wait until the model is trained and saved.
+All required Python libraries are installed automatically when the project starts.
 
-4. After training:
+---
 
-   * The file `app.py` will run automatically inside the virtual environment.
-   * A Flask web app will be created.
-   * Open your browser and go to:
+## How to Run the Project
 
-     
-     http://localhost:5000
-     
+### 1. Clone the repository
 
-     to use the application.
+git clone https://github.com/udaypatel04/Retail-Store-Sales-Forecasting-by-Product-Category.git
 
-Project Structure
+cd Retail-Store-Sales-Forecasting-by-Product-Category
 
-│project/
-│── files/                # Data and supporting files
-│── model_train/          # Scripts and notebooks for training
-│── models/               # Saved models
-│── projectVirtualEnv/    # Auto-created virtual environment
-│── static/               # Static assets (CSS, JS, images)
-│── templates/            # HTML templates for Flask
-│── app.py                # Flask web application
-│── column_to_encode.py   # Handles encoding of categorical columns
-│── LaunchApp.py          # Entry point: sets up environment and workflow
-│── process.py            # Data processing logic
-│── README.md             # Project documentation
+---
 
+### 2. Start the project
 
+python LaunchApp.py
+
+This command will:
+- Create a virtual environment named `projectVirtualEnv`
+- Install all required dependencies
+- Launch Jupyter Notebook automatically
+
+---
+
+### 3. Train the model in Jupyter Notebook
+
+- Change the kernel to **projectVirtualEnv**
+- Run all notebook cells in sequence
+- Wait until the model is trained and saved successfully
+
+---
+
+### 4. Launch the web application
+
+After training is completed:
+- `app.py` will run automatically inside the virtual environment
+- A Flask web application will start
+
+Open your browser and visit:
+
+http://localhost:5000
+
+to use the application.
+
+---
+
+## Project Structure
+
+project/
+│
+├── files/ # Dataset and supporting files
+├── model_train/ # Model training scripts and notebooks
+├── models/ # Trained and saved models
+├── projectVirtualEnv/ # Auto-created virtual environment
+├── static/ # Static files (CSS, JS, images)
+├── templates/ # HTML templates for Flask
+├── app.py # Flask web application
+├── column_to_encode.py # Categorical column encoding logic
+├── LaunchApp.py # Entry point for setup and execution
+├── process.py # Data preprocessing logic
+└── README.md # Project documentation
+
+---
+
+## Use Case
+
+This project is suitable for:
+- Machine learning academic projects
+- Retail analytics learning
+- Demonstrating end-to-end ML workflow
+- Portfolio and GitHub showcase
+
+---
+
+## Future Enhancements
+
+- Add more advanced forecasting models
+- Improve UI and visualizations
+- Support real-time data input
+- Add performance metrics dashboard
+- Deploy the application on cloud
+
+---
+
+## License
+
+This project is created for educational and academic purposes.  
+You are free to use and modify it for learning and non-commercial use.
+
+---
+
+## Author
+
+**Uday Patel**  
